@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Your Website Title</title>
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+	<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="Your description" />
+	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+</head>
+<body>
+	<!-- Your share button code -->
+	<a href="#" class="fb-share">Share on Facebook</a>
+	<div id="fb-root"></div>
+
+</body>
+<!-- Load Facebook SDK for JavaScript -->
+	<script>
+		(function(d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id))
+		        return;
+		    js = d.createElement(s);
+		    js.id = id;
+		    js.src = "//connect.facebook.net/en_US/all.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+		window.fbAsyncInit = function() {
+		    FB.init({
+		        appId: '210115759399043',  // Change appId 210115759399043 with your Facebook Application ID
+		        status: true,
+		        xfbml: true,
+		        cookie: true
+		    });
+		};
+
+		$(document).ready(function() {
+		    $('.fb-share').click(function() {
+		        FB.ui({
+		            method: 'feed',
+		            name: 'Share Test',
+		            link: 'http://ruucm.me',
+		            picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/c0.2.64.64/p64x64/14292291_1125309417538070_1126445235032104471_n.jpg?oh=0f60a255a25ffb3b9757f7158da696e0&oe=58CCA030',
+		            description: 'PHP Share button Test'
+		        });
+		    });
+		});
+	</script>
+</html>
