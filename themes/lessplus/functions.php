@@ -24,7 +24,7 @@ register_nav_menus(
 
 function less_scripts()  {
 	wp_deregister_script('jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.2.4', true );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.2.4', false );
 
 	// theme styles
 	wp_enqueue_style( 'less-style', get_template_directory_uri() . '/css/style.css', '10000', 'all' );
