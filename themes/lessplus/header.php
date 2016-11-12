@@ -8,7 +8,7 @@
 <header id="masthead" class="site-header" role="banner">
 	<div class="container">
 		<div class="gravatar">
-			<a href="//twitter.com/ruucm">
+			<a href="//twitter.com/intent/follow?screen_name=ruucm">
 				<?php 
 					// grab admin email and their photo
 					$admin_email = get_option('admin_email');
