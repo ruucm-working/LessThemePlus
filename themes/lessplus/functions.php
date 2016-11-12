@@ -34,6 +34,7 @@ function load_scripts()  {
 	// add theme scripts
 	wp_enqueue_script( 'less', get_template_directory_uri() . '/js/theme.min.js', array(), LESS_VERSION, true );
 
+	//Social Buttons
 	wp_enqueue_script( 'social-share', get_template_directory_uri() . '/js/social_share.js', false, '1.0.0', true );
 	wp_localize_script( 'social-share', 'blog_infos',
 		array(
@@ -44,5 +45,6 @@ function load_scripts()  {
 			'postExcerpt'	=> $post->post_excerpt,
 			'url'			=> get_permalink()
 		) );
+	wp_enqueue_script( 'twitter-wigets', 'https://platform.twitter.com/widgets.js', false, '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );

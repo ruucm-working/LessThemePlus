@@ -3,7 +3,6 @@
 	/* Start Footer
 	/*-----------------------------------------------------------------------------------*/
 ?>
-<!-- Load Facebook SDK for JavaScript -->
 <footer class="site-footer" role="contentinfo">
 	<div class="site-info container">
 		<?php do_action( 'break_credits' ); ?>
