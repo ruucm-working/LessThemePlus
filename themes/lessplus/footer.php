@@ -8,7 +8,11 @@
 		<?php do_action( 'break_credits' ); ?>
 		<!-- Your share button code -->
 		<div class="soc-buttons">
-			<a target="_blank" href="//twitter.com/intent/tweet?text=<?php echo get_bloginfo('description'); ?>+@ruucm+<?php echo get_bloginfo('url'); ?>" class="soc-buttons-twitter"></a>
+			<?php if (is_home() || is_archive()): ?>
+				<a target="_blank" href="//twitter.com/intent/tweet?text=<?php echo get_bloginfo('description'); ?>+@ruucm+<?php echo get_bloginfo('url'); ?>" class="soc-buttons-twitter"></a>
+			<?php else: ?>
+				<a target="_blank" href="//twitter.com/intent/tweet?text=<?php echo get_the_title(); ?>+@ruucm+<?php echo get_permalink(); ?>" class="soc-buttons-twitter"></a>
+			<?php endif; ?>
 			<a class="soc-buttons-facebook fb-share">
 			</a>
 		</div>
