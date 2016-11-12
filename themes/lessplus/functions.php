@@ -48,3 +48,8 @@ function load_scripts()  {
 	wp_enqueue_script( 'twitter-wigets', 'https://platform.twitter.com/widgets.js', false, '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
+
+/**
+ *	Limit Post Revisions
+ */
+if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 10);
