@@ -39,6 +39,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   font: inherit;
   font-size: 100%;
+  &::selection {
+    background-color: #14FC7D;
+  }
 }
 
 /* HTML5 display-role reset for older browsers */
