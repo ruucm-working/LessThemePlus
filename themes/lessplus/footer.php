@@ -28,10 +28,10 @@
 		    $('.fb-share').click(function() {
 		        FB.ui({
 		            method: 'feed',
-		            name: 'Share Test',
-		            link: 'http://ruucm.me',
+		            // name: 'Share Test',
+		            // link: 'http://ruucm.me',
 		            picture: 'https://scontent.xx.fbcdn.net/v/t1.0-1/c0.2.64.64/p64x64/14292291_1125309417538070_1126445235032104471_n.jpg?oh=0f60a255a25ffb3b9757f7158da696e0&oe=58CCA030',
-		            description: 'PHP Share button Test'
+		            // description: 'PHP Share button Test'
 		        });
 		    });
 		});
@@ -51,7 +51,7 @@
 		<?php else : ?>
 			<div class="soc-buttons">
 				<a target="_blank" href="//twitter.com/intent/tweet?text=<?php the_title(); ?>+@ruucm+<?php the_permalink(); ?>" class="soc-buttons-twitter"></a>
-				<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="soc-buttons-facebook fb-share">
+				<a data-href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="soc-buttons-facebook fb-share">
 				</a>
 			</div>
 		<?php endif; ?>
