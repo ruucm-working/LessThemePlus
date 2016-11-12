@@ -45,13 +45,13 @@
 		<?php if(is_home() || is_archive()): ?>
 			<div class="soc-buttons">
 				<a target="_blank" href="//twitter.com/intent/tweet?text=<?php echo get_bloginfo('description'); ?>+@ruucm+<?php echo get_bloginfo('url'); ?>" class="soc-buttons-twitter"></a>
-				<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_bloginfo('url'); ?>" class="soc-buttons-facebook">
+				<a data-href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_bloginfo('url'); ?>" class="soc-buttons-facebook fb-share">
 				</a>
 			</div>
 		<?php else : ?>
 			<div class="soc-buttons">
 				<a target="_blank" href="//twitter.com/intent/tweet?text=<?php the_title(); ?>+@ruucm+<?php the_permalink(); ?>" class="soc-buttons-twitter"></a>
-				<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="soc-buttons-facebook">
+				<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="soc-buttons-facebook fb-share">
 				</a>
 			</div>
 		<?php endif; ?>
