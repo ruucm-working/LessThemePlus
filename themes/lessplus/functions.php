@@ -22,7 +22,8 @@ register_nav_menus(
 /* Enque Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
 
-function less_scripts()  {
+function load_scripts()  {
+	global $post;
 	wp_deregister_script('jquery' );
 	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.2.4', false );
 
@@ -32,5 +33,16 @@ function less_scripts()  {
 	wp_enqueue_script( 'less-fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), LESS_VERSION, true );
 	// add theme scripts
 	wp_enqueue_script( 'less', get_template_directory_uri() . '/js/theme.min.js', array(), LESS_VERSION, true );
+
+	wp_enqueue_script( 'social-share', get_template_directory_uri() . '/js/social_share.js', false, '1.0.0', true );
+	wp_localize_script( 'social-share', 'blog_infos',
+		array(
+			'siteTitle'		=> get_bloginfo('name'),
+			'siteInfo'		=> get_bloginfo('description'),
+			'siteUrl'		=> get_bloginfo('url'),
+			'postTitle'		=> $post->post_title,
+			'postExcerpt'	=> $post->post_excerpt,
+			'url'			=> get_permalink()
+		) );
 }
-add_action( 'wp_enqueue_scripts', 'less_scripts' );
+add_action( 'wp_enqueue_scripts', 'load_scripts' );
