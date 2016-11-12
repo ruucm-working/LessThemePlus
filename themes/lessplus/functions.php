@@ -32,6 +32,9 @@ function less_scripts()  {
 	
 	// add theme scripts
 	wp_enqueue_script( 'less', get_template_directory_uri() . '/js/theme.min.js', array(), LESS_VERSION, true );
+
+	wp_deregister_script('jquery' );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.2.4', true );
   
 }
 add_action( 'wp_enqueue_scripts', 'less_scripts' );
