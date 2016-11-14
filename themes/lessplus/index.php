@@ -16,6 +16,9 @@
 	/*-----------------------------------------------------------------------------------*/
 	if( is_home() || is_archive() ) {
 ?>
+	<div class="container">
+		<div id="primary">
+			<div id="content" role="main">
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>

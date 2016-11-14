@@ -28,8 +28,3 @@
 	</div><!--/container -->
 		
 </header><!-- #masthead .site-header -->
-
-<div class="container">
-
-	<div id="primary">
-		<div id="content" role="main">

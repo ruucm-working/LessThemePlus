@@ -1,4 +1,9 @@
+<html <?php language_attributes(); ?>>
+<head>
+<meta name="viewport" content="width=device-width" />
 <?php get_header(); ?>
+</head>
+<body <?php body_class(); ?>>
 
 <?php
 	/*-----------------------------------------------------------------------------------*/
@@ -6,7 +11,9 @@
 	/*-----------------------------------------------------------------------------------*/
 	if( is_page()) {
 ?>
-
+	<div class="container">
+		<div id="primary">
+			<div id="content" role="main">
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -34,4 +41,11 @@
 			<?php endif; ?>
 
 	<?php } // end is_page(); ?>
+
+			</div><!--.content-->
+		</div><!--.primary-->
+
+	</div><!--.container-->
+</body>
 <?php get_footer(); ?>
+</html>

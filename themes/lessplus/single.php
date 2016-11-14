@@ -1,16 +1,9 @@
-<style type="text/css">
- 
-#share-buttons img {
-width: 35px;
-padding: 5px;
-border: 0;
-box-shadow: 0;
-display: inline;
-}
- 
-</style>
+<html <?php language_attributes(); ?>>
+<head>
+<meta name="viewport" content="width=device-width" />
 <?php get_header(); ?>
-
+</head>
+<body <?php body_class(); ?>>
 <?php
 	/*-----------------------------------------------------------------------------------*/
 	/* Start Single loop
@@ -18,6 +11,9 @@ display: inline;
 	
 	if( is_single() ) {
 ?>
+	<div class="container">
+		<div id="primary">
+			<div id="content" role="main">
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -58,4 +54,11 @@ display: inline;
 				</article>
 			<?php endif; ?>
 	<?php } //end is_single(); ?>
+
+			</div><!--.content-->
+		</div><!--.primary-->
+
+	</div><!--.container-->
+</body>
 <?php get_footer(); ?>
+</html>
