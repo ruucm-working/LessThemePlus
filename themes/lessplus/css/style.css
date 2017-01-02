@@ -433,7 +433,7 @@ article {
     font-weight: 700; }
     article .title a {
       text-decoration: none;
-      color: #404040; }
+      color: #191919; }
       article .title a:hover {
         color: #007998; }
   article .post-meta {
@@ -452,6 +452,9 @@ article {
   article .the-content img {
     width: 100%;
     height: auto; }
+  article .the-content h2 {
+    font-size: 30px;
+    color: #404040; }
   article .meta {
     line-height: 14.8px;
     font-size: 10px;
